@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--   <bean id="orderRepositoryImpl"
+             class="ru.neoflex.repository.impl.OrderRepositoryImpl">
+       </bean>
+
+       <bean id="orderService"
+             class="ru.neoflex.service.impl.OrderServiceImpl">
+           <property name="orderRepository" ref="orderRepositoryImpl"/>
+           <property name="standardSum" value="113"/>
+
+       </bean>-->
+<!--    <bean id="serviceFactory" class="ru.neoflex.service.ServiceFactory"/>
+    <bean id="orderRepository" factory-bean="serviceFactory" factory-method="createOrderRepository"/>-->
+ <!--   <bean id="orderRepository" class="ru.neoflex.service.ServiceFactory"
+          factory-method="createOrderRepository">
+    </bean>
+
+    <bean id="orderService" class="ru.neoflex.service.ServiceFactory"
+          factory-method="createOrderService">
+        <constructor-arg  index="0" value="555"/>
+    </bean>-->
+<!--
+    <context:annotation-config/>
+        <bean id="orderRepositoryImpl"
+              class="ru.neoflex.repository.impl.OrderRepositoryImpl">
+        </bean>
+
+        <bean id="orderService"
+              class="ru.neoflex.service.impl.OrderServiceImpl">
+            <property name="standardSum" value="115"/>
+        </bean>
+-->
+
+    <context:annotation-config/>
+    <context:component-scan base-package="ru.neoflex"/>
+
+
+</beans>
